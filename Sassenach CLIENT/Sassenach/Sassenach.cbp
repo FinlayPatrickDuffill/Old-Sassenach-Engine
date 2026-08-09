@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Sassenach CLIENT" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Sassenach" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Sassenach" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="D:/SDL OpenGL C++ libraries/SDL2/SDL2-2.24.0/x86_64-w64-mingw32/include/SDL2" />
+			<Add directory="D:/SDL OpenGL C++ libraries/freeglut/include/GL" />
+			<Add directory="D:/SDL OpenGL C++ libraries/DevIL Windows SDK/include" />
+			<Add directory="D:/SDL OpenGL C++ libraries/glm/include/glm" />
+			<Add directory="C:/SDL2 extensions/SDL2_image-2.6.1/x86_64-w64-mingw32/include/SDL2" />
+			<Add directory="D:/SDL OpenGL C++ libraries/SDL2 extensions/SDL2_net-2.4.0/SDL2_net-2.4.0/x86_64-w64-mingw32/include/SDL2" />
+		</Compiler>
+		<Linker>
+			<Add option="-lSDL2 -lDevIL -lILU -lOpenGL32 -lglu32 -lfreeglut -lSDL2_image -lSDL2_net -lSDL2_test" />
+			<Add library="mingw32" />
+			<Add library="SDL2main" />
+			<Add library="SDL2" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add library="SDL2_image" />
+			<Add library="SDL2_net" />
+			<Add library="SDL2_test" />
+			<Add directory="D:/SDL OpenGL C++ libraries/SDL2/SDL2-2.24.0/x86_64-w64-mingw32/lib" />
+			<Add directory="D:/SDL OpenGL C++ libraries/freeglut/lib/x64" />
+			<Add directory="D:/SDL OpenGL C++ libraries/DevIL Windows SDK/lib/x64/Release" />
+			<Add directory="D:/SDL OpenGL C++ libraries/glm/lib" />
+			<Add directory="C:/SDL2 extensions/SDL2_image-2.6.1/x86_64-w64-mingw32/lib" />
+			<Add directory="D:/SDL OpenGL C++ libraries/SDL2 extensions/SDL2_net-2.4.0/SDL2_net-2.4.0/x86_64-w64-mingw32/lib" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
+		</ExtraCommands>
+		<Unit filename="LEvents.h" />
+		<Unit filename="LMapLoading.cpp" />
+		<Unit filename="LMapLoading.h" />
+		<Unit filename="LOpenGL.h" />
+		<Unit filename="LTexture.cpp" />
+		<Unit filename="LTexture.h" />
+		<Unit filename="LUtil.cpp" />
+		<Unit filename="LUtil.h" />
+		<Unit filename="Network.h" />
+		<Unit filename="Network_client_macros.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
