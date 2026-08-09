@@ -1,0 +1,22 @@
+0.f, 0.f 1.f, 0.f, 1.f, 1.f 0.f, 1.f
+
+glTranslatef( (x - (mTextureWidth / 2)*1), (y + (mTextureHeight / 4)*1), 0.f );
+
+LUtil.cpp -> // glClear( GL_COLOR_BUFFER_BIT );
+
+void LTexture::render_trigonometry( GLfloat x, GLfloat y, trigonometry_rendering trig )
+{
+        trig.vertice_Nx = 0 + (mTextureHeight); // (mTextureWidth / 2.f);
+        trig.vertice_Ny = mTextureHeight * 0.75f; // (mTextureHeight * 0.75f);
+
+        if (i!= 360.f)
+        {
+            i=i+(1/45.f);
+            trig.vertice_N = (mTextureHeight * 0.75f)*glm::sin(i);
+            trig.vertice_Ny = (trig.vertice_Ny+(trig.vertice_N)) * 1.25;
+            printf("| N %f E %f S %f W %f $ANGLE %f\n", trig.vertice_Ny, trig.vertice_E, trig.vertice_S, trig.vertice_W, i);
+            trig.vertice_N = (mTextureWidth / 2.f)*glm::cos(i);
+            trig.vertice_Nx = (trig.vertice_Nx+(trig.vertice_N)) / 2;
+            printf("| N %f E %f S %f W %f $ANGLE %f\n", trig.vertice_Nx, trig.vertice_E, trig.vertice_S, trig.vertice_W, i);
+            printf("**\n");
+        }
